@@ -3,6 +3,7 @@
 Total Recon will install all the recon tools you need
 
 Tested on Ubuntu 18.04.3 LTS (Bionic Beaver)
+Vanquish utilizes a lot of Kali tools which are not installed with this script 
 
 Currently installing:
    1. Fast web fuzzer (ffuf)
@@ -19,6 +20,7 @@ Currently installing:
   12. Meg
   13. GitGraber
   14. getJS
+  15. Vanquish
 
 Usage:
 ``` console
