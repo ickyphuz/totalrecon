@@ -30,6 +30,7 @@ show_menus() {
 	echo "  12. Meg"
 	echo "  13. GitGraber"
 	echo "  14. getJS"
+	echo "  15. vanquish"
 	echo -e "\n\n  88. Install all tools"
 	echo -e "  99. Exit\n"
 }
@@ -53,6 +54,7 @@ read_option(){
         12) install_meg ;;
         13) install_gitGraber ;;
         14) install_getjs ;;
+	15) install_vanquish;;
         88) install_all ;;
 		99) exit 0;;
 		*) echo -e "${RED}Error...${SET}" && sleep 2
@@ -249,6 +251,17 @@ install_getjs() {
     pause
 }
 
+install_vanquish(){
+    # https://github.com/frizb/Vanquish
+    echo -e "${GREEN}Installing Vanquish ${SET}"
+    git clone https://github.com/frizb/Vanquish $HOME/tools/vanquish
+    cd $HOME/tools/vanquish
+    python2 Vanquish2.py -install
+    echo -e "${YELLOW}Finished installing Vanquish ${SET}\n"
+    pause
+}
+
+
 install_all () {
     install_ffuf
     install_findomain
@@ -265,6 +278,7 @@ install_all () {
     install_meg
     install_gitGraber
     install_getjs
+    install_vanquish
     pause
 }
 
